@@ -1,0 +1,46 @@
+{
+  "name": "chiko-admin-react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "test": "vite --mode test",
+    "build": "tsc -b && vite build --mode prod",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@better-scroll/core": "^2.5.1",
+    "ahooks": "^3.8.5",
+    "antd": "^5.25.3",
+    "dayjs": "^1.11.13",
+    "echarts": "^5.6.0",
+    "keepalive-for-react": "^4.0.2",
+    "lodash-es": "^4.17.21",
+    "motion": "^12.15.0",
+    "nprogress": "^0.2.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-error-boundary": "^6.0.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.6.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.30.1",
+    "vite": "^6.3.5",
+    "vite-plugin-inspect": "^11.1.0",
+    "vite-plugin-remove-console": "^2.2.0",
+    "vite-plugin-svg-icons": "^2.0.1"
+  },
+  "packageManager": "pnpm@10.9.0+sha512.0486e394640d3c1fb3c9d43d49cf92879ff74f8516959c235308f5a8f62e2e19528a65cdc2a3058f587cde71eba3d5b56327c8c33a97e4c4051ca48a10ca2d5f"
+}
