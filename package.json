@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@better-scroll/core": "^2.5.1",
+    "@ca/axios": "workspace:*",
+    "@ca/utils": "workspace:*",
     "@reduxjs/toolkit": "^2.8.2",
     "ahooks": "^3.8.5",
     "antd": "^5.25.3",
