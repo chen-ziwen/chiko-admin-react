@@ -1,8 +1,9 @@
+import LangProvider from "./features/lang/LangProvider";
 function App() {
   return (
-    <>
-      hello world
-    </>
+    <LangProvider>
+      
+    </LangProvider>
   )
 }
 
