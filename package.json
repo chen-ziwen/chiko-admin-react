@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/v5-patch-for-react-19": "^1.0.3",
     "@better-scroll/core": "^2.5.1",
     "@ca/axios": "workspace:*",
     "@ca/utils": "workspace:*",
@@ -35,6 +36,7 @@
   "devDependencies": {
     "@eslint/js": "^9.25.0",
     "@types/node": "^22.15.29",
+    "@types/nprogress": "^0.2.3",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",

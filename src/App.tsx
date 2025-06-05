@@ -1,8 +1,8 @@
-import LangProvider from "./features/lang/LangProvider";
+import { LangProvider } from "@/features/lang";
 function App() {
   return (
     <LangProvider>
-      
+
     </LangProvider>
   )
 }
