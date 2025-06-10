@@ -2,7 +2,7 @@ import CryptoJS from 'crypto-js';
 
 export class Crypto<T extends object> {
   private secret: string;
-  constructor(secret: string) { 
+  constructor(secret: string) {
     this.secret = secret;
   }
 
