@@ -9,4 +9,4 @@
 "@chiko-admin-react/utils": major
 ---
 
-yes
+- 更换包名为 `@chiko-admin-react/xxx`
