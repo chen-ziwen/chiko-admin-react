@@ -1,5 +1,5 @@
 {
-  "name": "@ca/utils",
+  "name": "@chiko-admin-react/utils",
   "version": "1.0.0",
   "exports": {
     ".": "./src/index.ts"

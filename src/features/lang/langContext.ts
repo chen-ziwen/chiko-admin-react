@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { localStg } from "@/util/storage";
+import { localStg } from "@/utils/storage";
 
 export type LangContextType = {
     locale: App.I18n.LangType;

@@ -1,5 +1,5 @@
 {
-  "name": "@ca/axios",
+  "name": "@chiko-admin-react/axios",
   "version": "1.0.0",
   "exports": {
     ".": "./src/index.ts"
@@ -12,7 +12,7 @@
     }
   },
   "dependencies": {
-    "@ca/utils": "workspace:*",
+    "@chiko-admin-react/utils": "workspace:*",
     "axios": "^1.9.0",
     "axios-retry": "^4.5.0",
     "qs": "^6.14.0"

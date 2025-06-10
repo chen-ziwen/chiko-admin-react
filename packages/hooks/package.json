@@ -1,0 +1,17 @@
+{
+  "name": "@chiko-admin-react/hooks",
+  "version": "1.0.0",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./src/*"
+      ]
+    }
+  },
+  "dependencies": {
+    "@chiko-admin-react/axios": "workspace:*"
+  }
+}

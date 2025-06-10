@@ -1,0 +1,21 @@
+{
+  "name": "@chiko-admin-react/materials",
+  "version": "1.0.0",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./src/*"
+      ]
+    }
+  },
+  "dependencies": {
+    "@chiko-admin-react/utils": "workspace:*",
+    "simplebar-react": "3.3.0"
+  },
+  "devDependencies": {
+    "typed-css-modules": "0.9.1"
+  }
+}

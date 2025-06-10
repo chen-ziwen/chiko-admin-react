@@ -1,4 +1,4 @@
-import { nanoid } from '@ca/utils';
+import { nanoid } from '@chiko-admin-react/utils';
 import axios, { AxiosError } from 'axios';
 import type { AxiosResponse, CreateAxiosDefaults, InternalAxiosRequestConfig } from 'axios';
 import axiosRetry from 'axios-retry';

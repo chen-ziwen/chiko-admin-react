@@ -3,7 +3,7 @@ import { locale } from "dayjs";
 
 import 'dayjs/locale/zh-cn';
 import 'dayjs/locale/en';
-import { localStg } from "@/util/storage";
+import { localStg } from "@/utils/storage";
 
 export const setDayjsLocale = (lang: App.I18n.LangType = "zh-CN") => {
 

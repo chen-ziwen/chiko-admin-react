@@ -1,5 +1,5 @@
-import { combineSlices,configureStore } from "@reduxjs/toolkit";
-import type {Action,ThunkAction} from "@reduxjs/toolkit";
+import { combineSlices, configureStore } from "@reduxjs/toolkit";
+import type { Action, ThunkAction } from "@reduxjs/toolkit";
 
 export const store = configureStore({
   reducer: combineSlices({
@@ -13,4 +13,4 @@ export const store = configureStore({
 
 export type AppStore = typeof store;
 export type AppDispatch = AppStore["dispatch"];
-export type AppThunk<ReturnType= void> = ThunkAction<ReturnType, AppStore, unknown, Action>;
+export type AppThunk<ReturnType = void> = ThunkAction<ReturnType, AppStore, unknown, Action>;

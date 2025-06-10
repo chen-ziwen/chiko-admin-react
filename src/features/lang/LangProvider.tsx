@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren, useState } from 'react';
 import { setLang } from '@/locales';
-import { localStg } from '@/util/storage';
+import { localStg } from '@/utils/storage';
 import { LangContext, localeOptions } from './langContext';
 
 const langProvider: FC<PropsWithChildren> = ({ children }) => {

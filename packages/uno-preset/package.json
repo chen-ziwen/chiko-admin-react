@@ -1,5 +1,5 @@
 {
-    "name": "@ca/uno-preset",
+    "name": "@chiko-admin-react/uno-preset",
     "version": "1.0.0",
     "exports": {
         ".": "./src/index.ts"

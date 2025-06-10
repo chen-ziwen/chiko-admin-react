@@ -1,0 +1,17 @@
+{
+  "name": "@chiko-admin-react/fetch",
+  "version": "1.0.0",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./src/*"
+      ]
+    }
+  },
+  "dependencies": {
+    "ofetch": "1.4.1"
+  }
+}
