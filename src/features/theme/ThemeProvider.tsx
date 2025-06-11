@@ -3,6 +3,8 @@ import { localStg } from '@/utils/storage';
 import { ThemeContext, toggleCssDarkMode } from './themeContext';
 import type { FC, PropsWithChildren } from 'react';
 
+const DARK_MODE_MEDIA_QUERY = '(prefers-color-scheme: dark)';
+
 const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
   const [themeMode, setThemeMode] = useState<ThemeModeType>((localStg.get('themeMode') as ThemeModeType) || 'light');
 
@@ -22,7 +24,7 @@ const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
     changeThemeMode(themeModes[nextIndex]);
   };
 
-  // 当 darkMode发生变化时，切换主题
+  // 监听 darkMode，当它发生变化时，切换主题
   useEffect(() => {
     toggleCssDarkMode(darkMode);
     localStg.set('darkMode', darkMode);
@@ -31,7 +33,7 @@ const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
   // 初始化主题配置
   useMount(() => {
     // 利用媒体查询判断当前系统是否处于暗黑模式
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const mediaQuery = window.matchMedia(DARK_MODE_MEDIA_QUERY);
 
     const handler = (event: MediaQueryListEvent) => {
       if (themeMode !== 'system') return;

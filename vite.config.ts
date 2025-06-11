@@ -12,10 +12,10 @@ export default defineConfig({
     },
   },
   server: {
-    port: 9527,
+    port: 520,
     open: true,
     warmup: {
-      clientFiles:["./index.html",'./src/{pages,components}/*'],
+      clientFiles: ["./index.html", './src/{pages,components}/*'],
     }
   }
 })
