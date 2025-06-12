@@ -1,5 +1,5 @@
 {
-  "name": "@chiko-admin-react/hooks",
+  "name": "@chiko-admin/hooks",
   "version": "1.0.0",
   "exports": {
     ".": "./src/index.ts"
@@ -12,6 +12,6 @@
     }
   },
   "dependencies": {
-    "@chiko-admin-react/axios": "workspace:*"
+    "@chiko-admin/axios": "workspace:*"
   }
 }

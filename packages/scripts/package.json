@@ -1,5 +1,5 @@
 {
-  "name": "@chiko-admin-react/scripts",
+  "name": "@chiko-admin/scripts",
   "version": "1.0.0",
   "bin": {
     "sa": "./bin.ts"

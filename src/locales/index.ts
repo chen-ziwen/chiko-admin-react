@@ -15,7 +15,7 @@ export async function setupI18n() {
     });
 }
 
-export const $t = i18nInstance.t;
+export const $t = i18nInstance.t; // 组件外使用 $t 翻译
 
 export function setLang(locale: App.I18n.LangType) {
     i18nInstance.changeLanguage(locale);

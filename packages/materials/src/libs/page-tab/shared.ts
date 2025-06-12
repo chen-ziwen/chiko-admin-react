@@ -1,4 +1,4 @@
-import { addColorAlpha, transformColorWithOpacity } from '@chiko-admin-react/color';
+import { addColorAlpha, transformColorWithOpacity } from '@chiko-admin/color';
 
 import type { PageTabCssVars, PageTabCssVarsProps } from '../../types';
 

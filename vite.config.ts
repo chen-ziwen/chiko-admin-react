@@ -11,6 +11,14 @@ export default defineConfig({
       '~': fileURLToPath(new URL('./', import.meta.url))
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "@/styles/scss/global.scss" as *;`,
+        api: 'modern-compiler'
+      },
+    },
+  },
   server: {
     port: 520,
     open: true,

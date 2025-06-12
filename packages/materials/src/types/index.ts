@@ -212,7 +212,7 @@ export interface AdminLayoutProps
    * @example
    *   use the default id by import
    *   ```ts
-   *   import { adminLayoutScrollElId } from '@chiko-admin-react/vue-materials';
+   *   import { adminLayoutScrollElId } from '@chiko-admin/vue-materials';
    *   ```
    *
    * @default

@@ -1,4 +1,4 @@
-import { createLocalforage, createStorage, StorageType } from '@chiko-admin-react/utils';
+import { createLocalforage, createStorage, StorageType } from '@chiko-admin/utils';
 
 const storagePrxfix = import.meta.env.VITE_STORAGE_PREFIX || '';
 

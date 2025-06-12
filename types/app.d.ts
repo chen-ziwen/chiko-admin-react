@@ -2,7 +2,7 @@
 declare namespace App {
   /** Theme namespace */
   namespace Theme {
-    type ColorPaletteNumber = import('@chiko-admin-react/color').ColorPaletteNumber;
+    type ColorPaletteNumber = import('@chiko-admin/color').ColorPaletteNumber;
 
     /** Theme setting */
     interface ThemeSetting {

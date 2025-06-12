@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 
-import type { FlatResponseData } from '@chiko-admin-react/axios';
+import type { FlatResponseData } from '@chiko-admin/axios';
 import type { AxiosError } from 'axios';
 import type { MutableRefObject } from 'react';
 

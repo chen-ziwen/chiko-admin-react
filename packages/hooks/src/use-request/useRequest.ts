@@ -1,4 +1,4 @@
-import type { FlatResponseData } from '@chiko-admin-react/axios';
+import type { FlatResponseData } from '@chiko-admin/axios';
 
 import useAutoRunPlugin from './plugins/useAutoRunPlugin';
 import useCachePlugin from './plugins/useCachePlugin';

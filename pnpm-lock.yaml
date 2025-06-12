@@ -14,19 +14,19 @@ importers:
       '@better-scroll/core':
         specifier: ^2.5.1
         version: 2.5.1
-      '@chiko-admin-react/axios':
+      '@chiko-admin/axios':
         specifier: workspace:*
         version: link:packages/axios
-      '@chiko-admin-react/hooks':
+      '@chiko-admin/hooks':
         specifier: workspace:*
         version: link:packages/hooks
-      '@chiko-admin-react/materials':
+      '@chiko-admin/materials':
         specifier: workspace:*
         version: link:packages/materials
-      '@chiko-admin-react/uno-preset':
+      '@chiko-admin/uno-preset':
         specifier: workspace:*
         version: link:packages/uno-preset
-      '@chiko-admin-react/utils':
+      '@chiko-admin/utils':
         specifier: workspace:*
         version: link:packages/utils
       '@iconify/react':
@@ -177,7 +177,7 @@ importers:
 
   packages/axios:
     dependencies:
-      '@chiko-admin-react/utils':
+      '@chiko-admin/utils':
         specifier: workspace:*
         version: link:../utils
       axios:
@@ -199,7 +199,7 @@ importers:
 
   packages/color:
     dependencies:
-      '@chiko-admin-react/utils':
+      '@chiko-admin/utils':
         specifier: workspace:^
         version: link:../utils
       colord:
@@ -208,13 +208,13 @@ importers:
 
   packages/hooks:
     dependencies:
-      '@chiko-admin-react/axios':
+      '@chiko-admin/axios':
         specifier: workspace:*
         version: link:../axios
 
   packages/materials:
     dependencies:
-      '@chiko-admin-react/utils':
+      '@chiko-admin/utils':
         specifier: workspace:*
         version: link:../utils
       simplebar-react:

@@ -2,9 +2,9 @@ declare namespace AntDesign {
   type TableColumnType<T> = import('antd').TableColumnType<T>;
   type TableColumnGroupType<T> = import('antd').TableColumnGroupType<T>;
   type TablePaginationConfig = import('antd').TablePaginationConfig;
-  type TableColumnCheck = import('@chiko-admin-react/hooks').TableColumnCheck;
-  type TableDataWithIndex<T> = import('@chiko-admin-react/hooks').TableDataWithIndex<T>;
-  type FlatResponseData<T> = import('@chiko-admin-react/axios').FlatResponseData<T>;
+  type TableColumnCheck = import('@chiko-admin/hooks').TableColumnCheck;
+  type TableDataWithIndex<T> = import('@chiko-admin/hooks').TableDataWithIndex<T>;
+  type FlatResponseData<T> = import('@chiko-admin/axios').FlatResponseData<T>;
 
   type TableData = Api.Common.CommonRecord<object>;
 
@@ -34,7 +34,7 @@ declare namespace AntDesign {
   type GetTableData<A extends TableApiFn> = A extends TableApiFn<infer T> ? T : never;
 
   type AntDesignTableConfig<A extends TableApiFn> = Pick<
-    import('@chiko-admin-react/hooks').TableConfig<A, GetTableData<A>, TableColumn<TableDataWithIndex<GetTableData<A>>>>,
+    import('@chiko-admin/hooks').TableConfig<A, GetTableData<A>, TableColumn<TableDataWithIndex<GetTableData<A>>>>,
     'apiFn' | 'apiParams' | 'columns' | 'immediate'
   > & { rowKey?: keyof GetTableData<A> };
 }

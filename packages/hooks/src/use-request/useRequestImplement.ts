@@ -1,4 +1,4 @@
-import type { FlatResponseData } from '@chiko-admin-react/axios';
+import type { FlatResponseData } from '@chiko-admin/axios';
 import { useCreation, useLatest, useMemoizedFn, useUnmount, useUpdate } from 'ahooks';
 
 import Fetch from './Fetch';

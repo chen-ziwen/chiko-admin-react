@@ -1,4 +1,4 @@
-import type { FlatResponseData } from '@chiko-admin-react/axios';
+import type { FlatResponseData } from '@chiko-admin/axios';
 import type { AxiosError } from 'axios';
 
 import type Fetch from './Fetch';

@@ -1,5 +1,5 @@
 {
-  "name": "chiko-admin-react",
+  "name": "chiko-admin",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,11 +14,11 @@
   "dependencies": {
     "@ant-design/v5-patch-for-react-19": "^1.0.3",
     "@better-scroll/core": "^2.5.1",
-    "@chiko-admin-react/axios": "workspace:*",
-    "@chiko-admin-react/hooks": "workspace:*",
-    "@chiko-admin-react/materials": "workspace:*",
-    "@chiko-admin-react/uno-preset": "workspace:*",
-    "@chiko-admin-react/utils": "workspace:*",
+    "@chiko-admin/axios": "workspace:*",
+    "@chiko-admin/hooks": "workspace:*",
+    "@chiko-admin/materials": "workspace:*",
+    "@chiko-admin/uno-preset": "workspace:*",
+    "@chiko-admin/utils": "workspace:*",
     "@iconify/react": "^6.0.0",
     "@reduxjs/toolkit": "^2.8.2",
     "ahooks": "^3.8.5",

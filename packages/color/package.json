@@ -1,5 +1,5 @@
 {
-  "name": "@chiko-admin-react/color",
+  "name": "@chiko-admin/color",
   "version": "1.0.0",
   "exports": {
     ".": "./src/index.ts"
@@ -12,7 +12,7 @@
     }
   },
   "dependencies": {
-    "@chiko-admin-react/utils": "workspace:^",
+    "@chiko-admin/utils": "workspace:^",
     "colord": "2.9.3"
   }
 }

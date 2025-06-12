@@ -8,7 +8,7 @@ export type LangContextType = {
 };
 
 // 语言选项
-export const localeOptions:LangContextType["localeOptions"] = [
+export const localeOptions: LangContextType["localeOptions"] = [
     {
         key: 'zh-CN',
         label: '中文'
