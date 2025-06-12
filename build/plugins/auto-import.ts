@@ -1,7 +1,9 @@
 import AutoImport from "unplugin-auto-import/vite";
 import IconsResolver from "unplugin-icons/resolver";
 
-export default function setupAutoImport() {
+export function setupAutoImport(env: Env.ImportMeta) {
+    const { VITE_ICON_LOCAL_PREFIX, VITE_ICON_PREFIX } = env;
+    const collectionName = VITE_ICON_LOCAL_PREFIX.replace(`${VITE_ICON_PREFIX}-`, "");
     return AutoImport({
         imports: [ // 自动导入预设中的 API
             "react",
@@ -18,7 +20,12 @@ export default function setupAutoImport() {
         dts: "src/types/auto-import.d.ts", // 生成相应的 .d.ts 文件
         include: [/\.[tj]sx?$/],
         resolvers: [ // 自定义解析器
-            IconsResolver({ prefix: "icon" }),
+            IconsResolver({
+                prefix: VITE_ICON_PREFIX,
+                componentPrefix: VITE_ICON_PREFIX,
+                extension: "tsx",
+                customCollections: [collectionName],
+            }),
             autoImportAntd,
         ],
     });
