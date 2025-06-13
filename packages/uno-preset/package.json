@@ -1,14 +1,12 @@
 {
-    "name": "@chiko-admin/uno-preset",
-    "version": "1.0.0",
-    "exports": {
-        ".": "./src/index.ts"
-    },
-    "typesVersions": {
-        "*": {
-            "*": [
-                "./src/*"
-            ]
-        }
+  "name": "@chiko-admin/uno-preset",
+  "version": "1.0.0",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "typesVersions": {
+    "*": {
+      "*": ["./src/*"]
     }
+  }
 }

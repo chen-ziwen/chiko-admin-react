@@ -1,7 +1,9 @@
 import { ThemeMode, type ThemeModeType } from 'ahooks/lib/useTheme';
-import { localStg } from '@/utils/storage';
-import { ThemeContext, toggleCssDarkMode } from './themeContext';
 import type { FC, PropsWithChildren } from 'react';
+
+import { localStg } from '@/utils/storage';
+
+import { ThemeContext, toggleCssDarkMode } from './themeContext';
 
 const DARK_MODE_MEDIA_QUERY = '(prefers-color-scheme: dark)';
 

@@ -1,16 +1,18 @@
 {
   "name": "chiko-admin",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.9.0+sha512.0486e394640d3c1fb3c9d43d49cf92879ff74f8516959c235308f5a8f62e2e19528a65cdc2a3058f587cde71eba3d5b56327c8c33a97e4c4051ca48a10ca2d5f",
   "scripts": {
-    "start": "vite",
-    "dev": "vite",
-    "test": "vite --mode test",
     "build": "tsc -b && vite build --mode prod",
-    "lint": "eslint .",
+    "ci:publish": "pnpm publish -r",
+    "dev": "vite",
+    "lint": "eslint . --fix",
+    "prepare": "husky install",
     "preview": "vite preview",
-    "ci:publish": "pnpm publish -r"
+    "start": "vite",
+    "test": "vite --mode test"
   },
   "dependencies": {
     "@ant-design/v5-patch-for-react-19": "^1.0.3",
@@ -41,6 +43,8 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.4",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.25.0",
     "@iconify/json": "^2.2.347",
     "@iconify/types": "^2.0.0",
@@ -62,6 +66,8 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "eslint-plugin-sort": "^4.0.0",
     "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.0",
     "simple-git-hooks": "^2.13.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
@@ -72,5 +78,9 @@
     "vite-plugin-remove-console": "^2.2.0",
     "vite-plugin-svg-icons": "^2.0.1"
   },
-  "packageManager": "pnpm@10.9.0+sha512.0486e394640d3c1fb3c9d43d49cf92879ff74f8516959c235308f5a8f62e2e19528a65cdc2a3058f587cde71eba3d5b56327c8c33a97e4c4051ca48a10ca2d5f"
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+  }
 }

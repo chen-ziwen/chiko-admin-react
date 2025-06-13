@@ -169,11 +169,11 @@ export type Slots = {
 /** Admin layout props */
 export interface AdminLayoutProps
   extends AdminLayoutHeaderConfig,
-  AdminLayoutTabConfig,
-  AdminLayoutSiderConfig,
-  AdminLayoutContentConfig,
-  AdminLayoutFooterConfig,
-  Slots {
+    AdminLayoutTabConfig,
+    AdminLayoutSiderConfig,
+    AdminLayoutContentConfig,
+    AdminLayoutFooterConfig,
+    Slots {
   /**
    * The common class of the layout
    *

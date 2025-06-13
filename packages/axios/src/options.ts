@@ -8,8 +8,8 @@ import type { RequestOption } from './type';
 export function createDefaultOptions<ResponseData = any>(options?: Partial<RequestOption<ResponseData>>) {
   const opts: RequestOption<ResponseData> = {
     isBackendSuccess: _response => true,
-    onBackendFail: async () => { },
-    onError: async () => { },
+    onBackendFail: async () => {},
+    onError: async () => {},
     onRequest: async config => config,
     transformBackendResponse: async response => response.data
   };

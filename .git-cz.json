@@ -1,0 +1,58 @@
+{
+  "disableEmoji": true,
+  "list": ["test", "feat", "fix", "chore", "docs", "refactor", "style", "ci", "perf", "release", "revert", "build"],
+  "maxMessageLength": 64,
+  "minMessageLength": 3,
+  "questions": ["type", "scope", "subject", "body", "breaking", "issues", "lerna"],
+  "scopes": [],
+  "types": {
+    "chore": {
+      "description": "Chore | 构建/工程依赖/工具",
+      "value": "chore"
+    },
+    "ci": {
+      "description": "Continuous Integration | CI 配置",
+      "value": "ci"
+    },
+    "docs": {
+      "description": "Documentation | 文档",
+      "value": "docs"
+    },
+    "feat": {
+      "description": "Features | 新功能",
+      "value": "feat"
+    },
+    "fix": {
+      "description": "Bug Fixes | Bug 修复",
+      "value": "fix"
+    },
+    "perf": {
+      "description": "Performance Improvements | 性能优化",
+      "value": "perf"
+    },
+    "refactor": {
+      "description": "Code Refactoring | 代码重构",
+      "value": "refactor"
+    },
+    "release": {
+      "description": "Create a release commit | 发版提交",
+      "value": "release"
+    },
+    "style": {
+      "description": "Styles | 风格",
+      "value": "style"
+    },
+    "revert": {
+      "description": "Revert | 回退",
+      "value": "revert"
+    },
+    "build": {
+      "description": "Build System | 打包构建",
+      "value": "build"
+    },
+    "test": {
+      "description": "Tests | 测试",
+      "value": "test"
+    }
+  }
+}

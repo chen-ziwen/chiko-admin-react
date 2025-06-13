@@ -36,6 +36,8 @@ export default defineConfig(
           pathGroupsExcludedImportTypes: ['builtin']
         }
       ],
+      // 只允许 warn 和 error 保留
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
 
       'no-underscore-dangle': 'off',
 
@@ -45,7 +47,6 @@ export default defineConfig(
           allowDestructuredState: true
         }
       ],
-
       'react/jsx-closing-bracket-location': ['warn', 'tag-aligned'],
       'react/jsx-closing-tag-location': 'warn',
       'react/jsx-curly-brace-presence': [
@@ -73,6 +74,7 @@ export default defineConfig(
         'warn',
         { callbacksLast: true, ignoreCase: true, multiline: 'last', shorthandFirst: true }
       ],
+
       'react/self-closing-comp': [
         'error',
         {
@@ -85,12 +87,12 @@ export default defineConfig(
         'warn',
         { allowExportNames: ['loader', 'action', 'handle', 'shouldRevalidate'] }
       ],
-
       'sort/import-members': ['error', { caseSensitive: true, natural: true }],
       'sort/imports': ['off'],
       'sort/string-enums': ['error', { caseSensitive: false, natural: true }],
       'sort/string-unions': ['error', { caseSensitive: false, natural: true }],
       'sort/type-properties': ['warn', { caseSensitive: false, natural: true }],
+
       'sort/type-properties': ['error', { caseSensitive: false, natural: true }]
     }
   }

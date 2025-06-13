@@ -20,9 +20,9 @@ export interface FetchState<TData extends FlatResponseData, TParams extends any[
 export interface PluginReturn<TData extends FlatResponseData, TParams extends any[]> {
   onBefore?: (params: TParams) =>
     | ({
-      returnNow?: boolean;
-      stopNow?: boolean;
-    } & Partial<FetchState<FlatResponseData, TParams>>)
+        returnNow?: boolean;
+        stopNow?: boolean;
+      } & Partial<FetchState<FlatResponseData, TParams>>)
     | null;
 
   onCancel?: () => void;

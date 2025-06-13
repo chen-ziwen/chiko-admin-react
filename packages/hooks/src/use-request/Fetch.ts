@@ -58,7 +58,7 @@ export default class Fetch<TData extends FlatResponseData, TParams extends any[]
 
     // stop request
     if (stopNow) {
-      return new Promise(() => { });
+      return new Promise(() => {});
     }
 
     this.setState({
@@ -86,7 +86,7 @@ export default class Fetch<TData extends FlatResponseData, TParams extends any[]
 
       if (currentCount !== this.count) {
         // prevent run.then when request is canceled
-        return new Promise(() => { });
+        return new Promise(() => {});
       }
 
       // const formattedResult = this.options.formatResultRef.current ? this.options.formatResultRef.current(res) : res;
@@ -112,7 +112,7 @@ export default class Fetch<TData extends FlatResponseData, TParams extends any[]
       const errorMessage = error as AxiosError;
       if (currentCount !== this.count) {
         // prevent run.then when request is canceled
-        return new Promise(() => { });
+        return new Promise(() => {});
       }
 
       this.setState({
