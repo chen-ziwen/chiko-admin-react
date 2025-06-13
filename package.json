@@ -5,13 +5,13 @@
   "private": true,
   "packageManager": "pnpm@10.9.0+sha512.0486e394640d3c1fb3c9d43d49cf92879ff74f8516959c235308f5a8f62e2e19528a65cdc2a3058f587cde71eba3d5b56327c8c33a97e4c4051ca48a10ca2d5f",
   "scripts": {
-    "build": "tsc -b && vite build --mode prod",
-    "ci:publish": "pnpm publish -r",
     "dev": "vite",
-    "lint": "eslint . --fix",
-    "prepare": "husky install",
     "preview": "vite preview",
-    "start": "vite",
+    "build": "tsc -b && vite build --mode prod",
+    "lint": "eslint . --fix",
+    "ci:publish": "pnpm publish -r",
+    "prepare": "husky",
+    "cz": "git-cz",
     "test": "vite --mode test"
   },
   "dependencies": {
@@ -65,6 +65,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "eslint-plugin-sort": "^4.0.0",
+    "git-cz": "^4.9.0",
     "globals": "^16.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.0",
