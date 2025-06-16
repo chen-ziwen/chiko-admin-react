@@ -83,6 +83,9 @@ importers:
       react-router-dom:
         specifier: ^7.6.1
         version: 7.6.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      simplebar-react:
+        specifier: 3.3.0
+        version: 3.3.0(react@19.1.0)
     devDependencies:
       '@changesets/cli':
         specifier: ^2.29.4
@@ -150,9 +153,6 @@ importers:
       eslint-plugin-react-refresh:
         specifier: ^0.4.19
         version: 0.4.20(eslint@9.28.0(jiti@2.4.2))
-      eslint-plugin-sort:
-        specifier: ^4.0.0
-        version: 4.0.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3)
       git-cz:
         specifier: ^4.9.0
         version: 4.9.0
@@ -2329,11 +2329,6 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7
 
-  eslint-plugin-sort@4.0.0:
-    resolution: {integrity: sha512-hmYRklp3SLDjhqcFWf7J9K+yGIVfzgnWpi0EqT7HTQJMGW9LIBXw1dshSoERf8PfelVz5ecpxiN/SJjWlCQtGA==}
-    peerDependencies:
-      eslint: '>=8.56.0'
-
   eslint-plugin-unicorn@59.0.1:
     resolution: {integrity: sha512-EtNXYuWPUmkgSU2E7Ttn57LbRREQesIP1BiLn7OZLKodopKfDXfBUkC/0j6mpw2JExwf43Uf3qLSvrSvppgy8Q==}
     engines: {node: ^18.20.0 || ^20.10.0 || >=21.0.0}
@@ -3062,9 +3057,6 @@ packages:
   isobject@3.0.1:
     resolution: {integrity: sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg==}
     engines: {node: '>=0.10.0'}
-
-  isomorphic-resolve@1.0.0:
-    resolution: {integrity: sha512-FWn6176keSYAapzv5P6ZzLdbCXj5uaG49h1y+EXRNqZm2RBztzBOYqCMmSe4Dmo+bIvk7sX/SN4pI/3QmfH3aw==}
 
   iterator.prototype@1.1.5:
     resolution: {integrity: sha512-H0dkQoCa3b2VEeKQBOxFph+JAbcrQdE7KC0UkqwpLmv2EC4P41QXP+rqo9wYodACiG5/WM5s9oDApTU8utwj9g==}
@@ -6627,7 +6619,7 @@ snapshots:
 
   axios@1.9.0:
     dependencies:
-      follow-redirects: 1.15.9(debug@4.4.1)
+      follow-redirects: 1.15.9
       form-data: 4.0.3
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
@@ -7409,16 +7401,6 @@ snapshots:
       string.prototype.matchall: 4.0.12
       string.prototype.repeat: 1.0.0
 
-  eslint-plugin-sort@4.0.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3):
-    dependencies:
-      '@typescript-eslint/utils': 8.34.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3)
-      eslint: 9.28.0(jiti@2.4.2)
-      isomorphic-resolve: 1.0.0
-      natural-compare: 1.4.0
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-
   eslint-plugin-unicorn@59.0.1(eslint@9.28.0(jiti@2.4.2)):
     dependencies:
       '@babel/helper-validator-identifier': 7.27.1
@@ -7665,9 +7647,7 @@ snapshots:
 
   flatted@3.3.3: {}
 
-  follow-redirects@1.15.9(debug@4.4.1):
-    optionalDependencies:
-      debug: 4.4.1
+  follow-redirects@1.15.9: {}
 
   for-each@0.3.5:
     dependencies:
@@ -8185,8 +8165,6 @@ snapshots:
       isarray: 1.0.0
 
   isobject@3.0.1: {}
-
-  isomorphic-resolve@1.0.0: {}
 
   iterator.prototype@1.1.5:
     dependencies:

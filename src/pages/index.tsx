@@ -1,8 +1,11 @@
-export const Home = () => {
+// import BaseLayout from '@/layouts';
+
+const RootLayout = () => {
   return (
     <div>
-      hello world
-      <span>111</span>
+      <Outlet />
     </div>
   );
 };
+
+export default RootLayout;

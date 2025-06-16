@@ -1,5 +1,4 @@
 import { defineConfig } from '@soybeanjs/eslint-config';
-import sort from 'eslint-plugin-sort';
 
 export default defineConfig(
   {
@@ -11,7 +10,6 @@ export default defineConfig(
     react: true,
     unocss: true
   },
-  sort.configs['flat/recommended'],
   {
     rules: {
       'import/newline-after-import': 'error',
@@ -86,14 +84,7 @@ export default defineConfig(
       'react-refresh/only-export-components': [
         'warn',
         { allowExportNames: ['loader', 'action', 'handle', 'shouldRevalidate'] }
-      ],
-      'sort/import-members': ['error', { caseSensitive: true, natural: true }],
-      'sort/imports': ['off'],
-      'sort/string-enums': ['error', { caseSensitive: false, natural: true }],
-      'sort/string-unions': ['error', { caseSensitive: false, natural: true }],
-      'sort/type-properties': ['warn', { caseSensitive: false, natural: true }],
-
-      'sort/type-properties': ['error', { caseSensitive: false, natural: true }]
+      ]
     }
   }
 );
