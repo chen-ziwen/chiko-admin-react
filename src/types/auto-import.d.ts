@@ -18,6 +18,7 @@ declare global {
   const Outlet: typeof import('react-router-dom')['Outlet']
   const Route: typeof import('react-router-dom')['Route']
   const Routes: typeof import('react-router-dom')['Routes']
+  const SimpleScrollbar: typeof import('../components/SimpleScrollbar')['default']
   const SvgIcon: typeof import('../components/SvgIcon')['default']
   const createRef: typeof import('react')['createRef']
   const forwardRef: typeof import('react')['forwardRef']

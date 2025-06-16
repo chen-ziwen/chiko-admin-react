@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-// import { ErrorBoundary } from 'react-error-boundary';
 import { Provider } from 'react-redux';
+import 'virtual:uno.css';
 import './index.css';
 
 import { store } from '@/store';
