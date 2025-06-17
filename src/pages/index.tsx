@@ -1,12 +1,11 @@
 import BaseLayout from '@/layouts';
-import GuardLayout from '@/pages/guard-layout';
+import RootLayout from '@/pages/root-layout';
 
-// 应用布局包含应用路由守卫和基础布局
 const AppLayout = () => {
   return (
-    <GuardLayout>
+    <RootLayout>
       <BaseLayout />
-    </GuardLayout>
+    </RootLayout>
   );
 };
 
