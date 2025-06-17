@@ -1,10 +1,10 @@
-import BaseLayout from '@/layouts';
-import RootLayout from '@/pages/root-layout';
+import { BasicLayout } from '@/layouts';
+import RootLayout from '@/pages/root';
 
 const AppLayout = () => {
   return (
     <RootLayout>
-      <BaseLayout />
+      <BasicLayout />
     </RootLayout>
   );
 };

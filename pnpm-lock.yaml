@@ -17,9 +17,6 @@ importers:
       '@chiko-admin/axios':
         specifier: workspace:*
         version: link:packages/axios
-      '@chiko-admin/docs':
-        specifier: workspace:*
-        version: link:packages/docs
       '@chiko-admin/hooks':
         specifier: workspace:*
         version: link:packages/hooks
@@ -324,8 +321,6 @@ importers:
       yargs:
         specifier: 17.7.2
         version: 17.7.2
-
-  packages/uno-preset: {}
 
   packages/utils:
     dependencies:
