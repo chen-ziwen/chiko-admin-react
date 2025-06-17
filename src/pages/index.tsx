@@ -1,11 +1,13 @@
-// import BaseLayout from '@/layouts';
+import BaseLayout from '@/layouts';
+import GuardLayout from '@/pages/guard-layout';
 
-const RootLayout = () => {
+// 应用布局包含应用路由守卫和基础布局
+const AppLayout = () => {
   return (
-    <div>
-      <Outlet />
-    </div>
+    <GuardLayout>
+      <BaseLayout />
+    </GuardLayout>
   );
 };
 
-export default RootLayout;
+export default AppLayout;
