@@ -83,8 +83,6 @@
     "vite-plugin-svg-icons": "^2.0.1"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
-    ]
+    "*.{js,jsx,ts,tsx}": ["eslint --fix"]
   }
 }
