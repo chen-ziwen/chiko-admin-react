@@ -1,4 +1,5 @@
-import { type PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
 
 interface InitialStateType {
   contentXScrollable: boolean;
@@ -20,10 +21,9 @@ const initialState: InitialStateType = {
   themeDrawerVisible: false
 };
 
-// 控制主题配置项的各种操作
 export const appSlice = createSlice({
-  initialState,
   name: 'app',
+  initialState,
   reducers: {
     closeThemeDrawer: state => {
       state.themeDrawerVisible = false;

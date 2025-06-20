@@ -38,6 +38,7 @@
     "lodash-es": "^4.17.21",
     "motion": "^12.15.0",
     "nprogress": "^0.2.0",
+    "ofetch": "^1.4.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-error-boundary": "^6.0.0",
