@@ -1,7 +1,7 @@
 const page = {
   about: {
     devDep: 'Development Dependency',
-    introduction: `SoybeanAdmin is an elegant and powerful admin template, based on the latest front-end technology stack, including React19.0, Vite6, TypeScript, ReactRouter7,Redux/toolkitand UnoCSS. It has built-in rich theme configuration and components, strict code specifications, and an automated file routing system. In addition, it also uses the online mock data solution based on ApiFox. SoybeanAdmin provides you with a one-stop admin solution, no additional configuration, and out of the box. It is also a best practice for learning cutting-edge technologies quickly.`,
+    introduction: `ChikoAdmin is an elegant and powerful admin template, based on the latest front-end technology stack, including React19.0, Vite6, TypeScript, ReactRouter7,Redux/toolkitand UnoCSS. It has built-in rich theme configuration and components, strict code specifications, and an automated file routing system. In addition, it also uses the online mock data solution based on ApiFox. ChikoAdmin provides you with a one-stop admin solution, no additional configuration, and out of the box. It is also a best practice for learning cutting-edge technologies quickly.`,
     prdDep: 'Production Dependency',
     projectInfo: {
       githubLink: 'Github Link',
@@ -60,11 +60,11 @@ const page = {
     message: 'Message',
     projectCount: 'Project Count',
     projectNews: {
-      desc1: 'Soybean created the open source project soybean-admin on May 28, 2021!',
-      desc2: 'Yanbowe submitted a bug to soybean-admin, the multi-tab bar will not adapt.',
-      desc3: 'Soybean is ready to do sufficient preparation for the release of soybean-admin!',
-      desc4: 'Soybean is busy writing project documentation for soybean-admin!',
-      desc5: 'Soybean just wrote some of the workbench pages casually, and it was enough to see!',
+      desc1: 'Chiko created the open source project chiko-admin on May 28, 2021!',
+      desc2: 'Yanbowe submitted a bug to chiko-admin, the multi-tab bar will not adapt.',
+      desc3: 'Chiko is ready to do sufficient preparation for the release of chiko-admin!',
+      desc4: 'Chiko is busy writing project documentation for chiko-admin!',
+      desc5: 'Chiko just wrote some of the workbench pages casually, and it was enough to see!',
       moreNews: 'More News',
       title: 'Project News'
     },

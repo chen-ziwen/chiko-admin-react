@@ -1,5 +1,5 @@
 import { useThemeSettings } from '@/features/theme';
-import { getReloadFlag, setReloadFlag } from '@/store/modules';
+import { getReloadFlag, setReloadFlag } from '@/stores/modules';
 
 /**
  * Reload page

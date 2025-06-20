@@ -1,4 +1,4 @@
-import { openThemeDrawer } from '@/store/modules';
+import { openThemeDrawer } from '@/stores/modules';
 
 const ThemeButton = memo(() => {
   const { t } = useTranslation();

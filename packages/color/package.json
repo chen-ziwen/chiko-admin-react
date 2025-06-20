@@ -1,0 +1,16 @@
+{
+  "name": "@chiko-admin/color",
+  "version": "1.0.0",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "typesVersions": {
+    "*": {
+      "*": ["./src/*"]
+    }
+  },
+  "dependencies": {
+    "@chiko-admin/utils": "workspace:*",
+    "colord": "2.9.3"
+  }
+}

@@ -48,7 +48,7 @@ export async function loadCliOptions(overrides?: Partial<CliOption>, cwd = proce
   const { config } = await loadConfig<Partial<CliOption>>({
     cwd,
     defaults: defaultOptions,
-    name: 'soybean',
+    name: 'chiko',
     overrides,
     packageJson: true
   });

@@ -4,7 +4,6 @@
 "@chiko-admin/scripts": patch
 "@chiko-admin/fetch": patch
 "@chiko-admin/axios": patch
-"@chiko-admin/color": patch
 "@chiko-admin/hooks": patch
 "@chiko-admin/utils": patch
 ---

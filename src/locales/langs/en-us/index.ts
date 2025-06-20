@@ -36,7 +36,7 @@ const local = {
   system: {
     errorReason: 'Cause Error',
     reload: 'Reload Page',
-    title: 'SoybeanAdmin',
+    title: 'ChikoAdmin',
     updateCancel: 'Later',
     updateConfirm: 'Refresh immediately',
     updateContent: 'A new version of the system has been detected. Do you want to refresh the page immediately?',

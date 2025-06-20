@@ -2,8 +2,6 @@
 declare namespace App {
   /** Theme namespace */
   namespace Theme {
-    type ColorPaletteNumber = import('@chiko-admin/color').ColorPaletteNumber;
-
     /** Theme setting */
     interface ThemeSetting {
       /** colour weakness mode */
@@ -124,9 +122,9 @@ declare namespace App {
 
     type ThemeColorKey = keyof ThemeColor;
 
-    type ThemePaletteColor = {
-      [key in ThemeColorKey | `${ThemeColorKey}-${ColorPaletteNumber}`]: string;
-    };
+    // type ThemePaletteColor = {
+    //   [key in ThemeColorKey | `${ThemeColorKey}-${ColorPaletteNumber}`]: string;
+    // };
 
     type BaseToken = Record<string, Record<string, string>>;
 
@@ -150,7 +148,7 @@ declare namespace App {
       colors: ThemeSettingTokenColor;
     }
 
-    type ThemeTokenColor = ThemePaletteColor & ThemeSettingTokenColor;
+    type ThemeTokenColor = ThemeSettingTokenColor;
 
     /** Theme token CSS variables */
     type ThemeTokenCSSVars = {
@@ -161,10 +159,10 @@ declare namespace App {
 
   /** Global namespace */
   namespace Global {
-    // type RouteKey = import('@soybean-react/vite-plugin-react-router').RouteKey;
-    // type RouteMap = import('@soybean-react/vite-plugin-react-router').RouteMap;
-    // type RoutePath = import('@soybean-react/vite-plugin-react-router').RoutePath;
-    // type LastLevelRouteKey = import('@soybean-react/vite-plugin-react-router').LastLevelRouteKey;
+    type RouteKey = import('@soybean-react/vite-plugin-react-router').RouteKey;
+    type RouteMap = import('@soybean-react/vite-plugin-react-router').RouteMap;
+    type RoutePath = import('@soybean-react/vite-plugin-react-router').RoutePath;
+    type LastLevelRouteKey = import('@soybean-react/vite-plugin-react-router').LastLevelRouteKey;
 
     /** The global header props */
     interface HeaderProps {
@@ -251,10 +249,9 @@ declare namespace App {
        */
       oldLabel?: string | null;
       /** The tab route key */
-      // routeKey: LastLevelRouteKey;
-      routeKey: any;
-      // /** The tab route path */
-      // routePath: RouteMap[LastLevelRouteKey];
+      routeKey: LastLevelRouteKey;
+      /** The tab route path */
+      routePath: RouteMap[LastLevelRouteKey];
     };
 
     /** Form rule */
@@ -270,7 +267,7 @@ declare namespace App {
    * Locales type
    */
   namespace I18n {
-    // type RouteKey = import('@soybean-react/vite-plugin-react-router').RouteKey;
+    type RouteKey = import('@soybean-react/vite-plugin-react-router').RouteKey;
 
     type LangType = 'en-US' | 'zh-CN';
 
@@ -279,8 +276,7 @@ declare namespace App {
       label: string;
     };
 
-    // type I18nRouteKey = Exclude<RouteKey, 'not-found' | 'root'>;
-    type I18nRouteKey = string;
+    type I18nRouteKey = Exclude<RouteKey, 'not-found' | 'root'>;
 
     type FormMsg = {
       invalid: string;

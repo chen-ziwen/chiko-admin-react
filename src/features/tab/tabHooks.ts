@@ -1,6 +1,7 @@
-import { useEmit, useOn } from '@sa/hooks';
+import { useEmit, useOn } from '@chiko-admin/hooks';
+import { useNavigate } from 'react-router-dom';
 
-import { useRoute, useRouter } from '@/features/router';
+import { useRoute } from '@/features/router';
 import {
   addTab,
   changeTabLabel,
@@ -8,13 +9,13 @@ import {
   selectTabs,
   setActiveFirstLevelMenuKey,
   setActiveTabId,
+  setRemoveCacheKey,
   setTabs,
   updateTab
-} from '@/features/tab/tabStore';
+} from '@/stores/modules';
 import { localStg } from '@/utils/storage';
 
 import { getActiveFirstLevelMenuKey } from '../menu/MenuUtil';
-import { setRemoveCacheKey } from '../router/routeStore';
 import { useThemeSettings } from '../theme';
 
 import { getFixedTabs, getTabByRoute, isTabInTabs } from './shared';
@@ -46,7 +47,7 @@ export function useTabActions() {
 
   const _tabIds = tabs.map(tab => tab.id);
 
-  const { navigate } = useRouter();
+  const navigate = useNavigate();
 
   const activeTabId = useAppSelector(selectActiveTabId);
 

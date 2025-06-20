@@ -8,7 +8,7 @@ import { icons, useTheme } from './themeContext';
 interface ThemeSwitchProps {
   className?: string;
   showTooltip?: boolean;
-  style: CSSProperties;
+  style?: CSSProperties;
   tooltipPlacement?: TooltipProps['placement'];
 }
 

@@ -1,7 +1,7 @@
 import type { ThemeModeType } from 'ahooks/lib/useTheme';
 import { createContext } from 'react';
 
-import { DARK_CLASS } from '@/constants/common';
+import { DARK_CLASS } from '@/constants/app';
 
 export type ThemeContextType = {
   darkMode: boolean;

@@ -1,0 +1,20 @@
+{
+  "name": "@chiko-admin/layout",
+  "version": "1.0.0",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "typesVersions": {
+    "*": {
+      "*": ["./src/*"]
+    }
+  },
+  "dependencies": {
+    "@chiko-admin/color": "workspace:^",
+    "@chiko-admin/utils": "workspace:*",
+    "simplebar-react": "3.3.0"
+  },
+  "devDependencies": {
+    "typed-css-modules": "0.9.1"
+  }
+}

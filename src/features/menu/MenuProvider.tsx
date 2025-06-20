@@ -2,7 +2,7 @@
 // import type { RouteObject } from 'react-router-dom';
 
 // import routes from '@/router';
-// import { selectActiveFirstLevelMenuKey, setActiveFirstLevelMenuKey } from '@/store/modules';
+// import { selectActiveFirstLevelMenuKey, setActiveFirstLevelMenuKey } from '@/stores/modules';
 
 // import { useLang } from '../lang';
 // // import { useRoute, useRouter } from '../router';

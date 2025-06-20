@@ -11,7 +11,7 @@ export function setupAutoImport(env: Env.ImportMeta) {
       'src/utils/**',
       'src/components/**'
     ],
-    dts: 'src/types/auto-import.d.ts',
+    dts: 'src/types/auto-imports.d.ts',
     imports: [
       // 自动导入预设中的 API
       'react',

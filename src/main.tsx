@@ -1,14 +1,16 @@
-import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Provider } from 'react-redux';
+import { ErrorBoundary } from 'react-error-boundary';
+
+import ErrorPage from '@/components/ErrorBoundary.tsx';
+
 import 'virtual:uno.css';
 import './index.css';
-
-import { store } from '@/store';
-
 import App from './App.tsx';
+import { setupI18n } from './locales/index.ts';
 
 function startup() {
+  setupI18n();
+
   const container = document.getElementById('root');
 
   if (!container) return;
@@ -16,11 +18,9 @@ function startup() {
   const root = createRoot(container);
 
   root.render(
-    <StrictMode>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </StrictMode>
+    <ErrorBoundary fallbackRender={ErrorPage}>
+      <App />
+    </ErrorBoundary>
   );
 }
 
