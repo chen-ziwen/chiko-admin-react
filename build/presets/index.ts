@@ -1,1 +1,1 @@
-export * from './uno-preset';
+export { default as presetChikoAdmin } from './uno-preset';

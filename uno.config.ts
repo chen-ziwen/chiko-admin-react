@@ -3,7 +3,7 @@ import transformerDirectives from '@unocss/transformer-directives';
 import transformerVariantGroup from '@unocss/transformer-variant-group';
 import { defineConfig } from '@unocss/vite';
 
-import { presetChikoAdmin } from './build';
+// import { presetChikoAdmin } from '~/build';
 
 export default defineConfig<Theme>({
   content: {
@@ -11,7 +11,7 @@ export default defineConfig<Theme>({
       exclude: ['node_modules', 'dist']
     }
   },
-  presets: [presetWind3({ dark: 'class' }), presetChikoAdmin()],
+  presets: [presetWind3({ dark: 'class' }) /* presetChikoAdmin() */],
   shortcuts: { 'card-wrapper': 'rd-8px shadow-sm' },
   theme: {
     fontSize: {

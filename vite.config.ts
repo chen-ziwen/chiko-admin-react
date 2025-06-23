@@ -7,9 +7,10 @@ import { getBuildTime, setupVitePlugins } from './build';
 
 // https://vite.dev/config/
 export default defineConfig(configEnv => {
-  const viteEnv = loadEnv(configEnv.mode, process.cwd()) as unknown as Env.ImportMeta;
+  const viteEnv = loadEnv(configEnv.mode, process.cwd()) as Env.ImportMeta;
   const buildTime = getBuildTime();
   return {
+    base: viteEnv.VITE_BASE_URL,
     css: {
       preprocessorOptions: {
         scss: {
@@ -27,10 +28,7 @@ export default defineConfig(configEnv => {
     },
     server: {
       open: true,
-      port: 520,
-      warmup: {
-        clientFiles: ['./index.html', './src/{pages,components}/*']
-      }
+      port: 5210
     }
   };
 });

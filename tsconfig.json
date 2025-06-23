@@ -12,13 +12,7 @@
       "~/*": ["./*"]
     },
     "resolveJsonModule": true,
-    "types": [
-      "vite/client",
-      "node",
-      "unplugin-icons/types/react",
-      "vite-plugin-svg-icons/client",
-      "@unocss/vite/client"
-    ],
+    "types": ["vite/client", "node", "unplugin-icons/types/react", "vite-plugin-svg-icons/client"],
     "allowImportingTsExtensions": true,
     /* Linting */
     "strict": true,

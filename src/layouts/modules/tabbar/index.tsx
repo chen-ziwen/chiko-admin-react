@@ -60,9 +60,9 @@ export const LayoutTabbar = () => {
   }
 
   return (
-    <DarkModeContainer className="shadow-tab size-full flex-y-center px-16px">
+    <DarkModeContainer className="shadow-tab flex-y-center size-full px-16px">
       <div
-        className="h-full flex-1-hidden"
+        className="flex-1-hidden h-full"
         ref={bsWrapper}
       >
         <BetterScroll
@@ -102,7 +102,7 @@ export const LayoutTabbar = () => {
                     }
                     onClick={() => handleClickTab(item)}
                   >
-                    <div className="max-w-240px ellipsis-text">{item.i18nKey ? t(item.i18nKey) : item.label}</div>
+                    <div className="ellipsis-text max-w-240px">{item.i18nKey ? t(item.i18nKey) : item.label}</div>
                   </PageTab>
                 </div>
               </ContextMenu>
