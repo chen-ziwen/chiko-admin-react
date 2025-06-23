@@ -26,5 +26,6 @@
   "prettier.enable": false,
   "typescript.tsdk": "node_modules/typescript/lib",
   "unocss.root": ["./"],
-  "i18n-ally.sourceLanguage": "zh-cn"
+  "i18n-ally.sourceLanguage": "zh-cn",
+  "css.validate": true
 }

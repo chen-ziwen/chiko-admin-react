@@ -1,7 +1,8 @@
+import { getColorPalette, getRgb, transformColorWithOpacity } from '@chiko-admin/color';
 import type { ConfigProviderProps } from 'antd';
 import { theme as antdTheme } from 'antd';
 
-import { DARK_CLASS } from '@/constants';
+import { DARK_CLASS } from '@/constants/app';
 import { overrideThemeSettings, themeSettings } from '@/theme/settings';
 import { themeVars } from '@/theme/vars';
 import { toggleHtmlClass } from '@/utils/common';
@@ -52,8 +53,8 @@ function getCssVarByTokens(tokens: App.Theme.BaseToken) {
 
       if (key === 'colors') {
         cssVarsKey = removeRgbPrefix(cssVarsKey);
-        // const { b, g, r } = getRgb(cssValue);
-        cssValue = `${255} ${255} ${255}`;
+        const { b, g, r } = getRgb(cssValue);
+        cssValue = `${r} ${g} ${b}`;
       }
 
       styles.push(`${cssVarsKey}: ${cssValue}`);
@@ -102,22 +103,22 @@ export function addThemeVarsToGlobal(tokens: App.Theme.BaseToken, darkTokens: Ap
  * @param colors Theme colors
  * @param [recommended=false] Use recommended color. Default is `false`
  */
-// function createThemePaletteColors(colors: App.Theme.ThemeColor, recommended = false) {
-//   const colorKeys = Object.keys(colors) as App.Theme.ThemeColorKey[];
-//   // const colorPaletteVar = {} as App.Theme.ThemePaletteColor;
+function createThemePaletteColors(colors: App.Theme.ThemeColor, recommended = false) {
+  const colorKeys = Object.keys(colors) as App.Theme.ThemeColorKey[];
+  const colorPaletteVar = {} as App.Theme.ThemePaletteColor;
 
-//   colorKeys.forEach(key => {
-//     const colorMap = getColorPalette(colors[key], recommended);
+  colorKeys.forEach(key => {
+    const colorMap = getColorPalette(colors[key], recommended);
 
-//     colorPaletteVar[key] = colorMap.get(500)!;
+    colorPaletteVar[key] = colorMap.get(500)!;
 
-//     colorMap.forEach((hex, number) => {
-//       colorPaletteVar[`${key}-${number}`] = hex;
-//     });
-//   });
+    colorMap.forEach((hex, number) => {
+      colorPaletteVar[`${key}-${number}`] = hex;
+    });
+  });
 
-//   return colorPaletteVar;
-// }
+  return colorPaletteVar;
+}
 
 /**
  * create theme token css vars value by theme settings
@@ -126,8 +127,12 @@ export function addThemeVarsToGlobal(tokens: App.Theme.BaseToken, darkTokens: Ap
  * @param tokens Theme setting tokens
  * @param [recommended=false] Use recommended color. Default is `false`
  */
-function createThemeToken(colors: App.Theme.ThemeColor, tokens?: App.Theme.ThemeSetting['tokens']) {
-  // const paletteColors = createThemePaletteColors(colors, recommended);
+function createThemeToken(
+  colors: App.Theme.ThemeColor,
+  tokens?: App.Theme.ThemeSetting['tokens'],
+  recommended = false
+) {
+  const paletteColors = createThemePaletteColors(colors, recommended);
 
   const { dark, light } = tokens || themeSettings.tokens;
 
@@ -136,8 +141,8 @@ function createThemeToken(colors: App.Theme.ThemeColor, tokens?: App.Theme.Theme
       ...light.boxShadow
     },
     colors: {
-      ...colors,
-      nprogress: colors.primary,
+      ...paletteColors,
+      nprogress: paletteColors.primary,
       ...light.colors
     }
   };
@@ -174,7 +179,7 @@ export function getAntdTheme(
 
   const { error, info, primary, success, warning } = colors;
 
-  // const bgColor = transformColorWithOpacity(primary, darkMode ? 0.3 : 0.1, darkMode ? '#000000' : '#fff');
+  const bgColor = transformColorWithOpacity(primary, darkMode ? 0.3 : 0.1, darkMode ? '#000000' : '#fff');
   const containerBgColor = darkMode ? tokens.dark?.colors?.container : tokens.light?.colors.container;
 
   const theme: ConfigProviderProps['theme'] = {
@@ -191,8 +196,7 @@ export function getAntdTheme(
         darkItemBg: 'transparent',
         darkSubMenuItemBg: 'transparent',
         itemMarginInline: 8,
-        // itemSelectedBg: bgColor,
-        itemSelectedBg: '#000000',
+        itemSelectedBg: bgColor,
         subMenuItemBg: 'transparent'
       }
     },
@@ -222,8 +226,12 @@ export function toggleAuxiliaryColorModes(colourWeakness = false) {
 }
 
 /** Setup theme vars to html */
-export function setupThemeVarsToHtml(themeColors: App.Theme.ThemeColor, tokens?: App.Theme.ThemeSetting['tokens']) {
-  const { darkThemeTokens, themeTokens } = createThemeToken(themeColors, tokens);
+export function setupThemeVarsToHtml(
+  themeColors: App.Theme.ThemeColor,
+  tokens?: App.Theme.ThemeSetting['tokens'],
+  recommended = false
+) {
+  const { darkThemeTokens, themeTokens } = createThemeToken(themeColors, tokens, recommended);
   addThemeVarsToGlobal(themeTokens, darkThemeTokens);
 }
 

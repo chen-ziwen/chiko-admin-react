@@ -13,7 +13,7 @@ import {
   LayoutContent,
   LayoutFooter,
   LayoutHeader,
-  LayoutMenu,
+  // LayoutMenu,
   LayoutSider,
   LayoutTabbar,
   ThemeDrawer
@@ -153,10 +153,10 @@ const BasicLayout = () => {
     >
       <LayoutContent />
 
-      <LayoutMenu
+      {/* <LayoutMenu
         mode={themeSettings.layout.mode}
         reverse={themeSettings.layout.reverseHorizontalMix}
-      />
+      /> */}
 
       <Suspense fallback={null}>
         <ThemeDrawer />

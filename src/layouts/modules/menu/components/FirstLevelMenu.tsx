@@ -1,3 +1,4 @@
+import { transformColorWithOpacity } from '@chiko-admin/color';
 import { SimpleScrollbar } from '@chiko-admin/layout';
 import clsx from 'clsx';
 import { cloneElement } from 'react';
@@ -5,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { MenuToggler, useMixMenuContext } from '@/features/menu';
 import { ThemeContext } from '@/features/theme';
-import { getSiderCollapse } from '@/stores/modules';
+import { getSiderCollapse, getThemeSettings } from '@/stores/modules';
 
 interface Props {
   children?: React.ReactNode;
@@ -32,7 +33,7 @@ function MixMenuItem(Props: MixMenuItemProps) {
     setActiveFirstLevelMenuKey
   } = Props;
 
-  // const themeSettings = useAppSelector(getThemeSettings);
+  const themeSettings = useAppSelector(getThemeSettings);
 
   const navigate = useNavigate();
 
@@ -43,8 +44,8 @@ function MixMenuItem(Props: MixMenuItemProps) {
   const selectedBgColor = getSelectedBgColor();
 
   function getSelectedBgColor() {
-    const light = '#ffffff';
-    const dark = '#000000';
+    const light = transformColorWithOpacity(themeSettings.themeColor, 0.1, '#ffffff');
+    const dark = transformColorWithOpacity(themeSettings.themeColor, 0.3, '#000000');
 
     return darkMode ? dark : light;
   }

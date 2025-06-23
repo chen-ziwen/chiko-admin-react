@@ -28,6 +28,8 @@ const getLevelKeys = (items1: LevelKeysProps[]) => {
 };
 
 const getSelectedMenuKeyPath = (matches: Router.Route['matched']) => {
+  if (!matches) return [];
+
   const result = matches.reduce((acc: string[], match, index) => {
     if (index < matches.length - 1 && match.pathname) {
       acc.push(match.pathname);

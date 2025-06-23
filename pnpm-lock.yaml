@@ -289,25 +289,6 @@ importers:
         specifier: 0.9.1
         version: 0.9.1
 
-  packages/materials:
-    dependencies:
-      '@chiko-admin/utils':
-        specifier: workspace:*
-        version: link:../utils
-      simplebar-react:
-        specifier: 3.3.0
-        version: 3.3.0(react@19.1.0)
-    devDependencies:
-      typed-css-modules:
-        specifier: 0.9.1
-        version: 0.9.1
-
-  packages/ofetch:
-    dependencies:
-      ofetch:
-        specifier: 1.4.1
-        version: 1.4.1
-
   packages/scripts:
     devDependencies:
       '@soybeanjs/changelog':

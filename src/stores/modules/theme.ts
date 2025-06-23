@@ -1,3 +1,4 @@
+import { getPaletteColorByNumber } from '@chiko-admin/color';
 import { createSelector, createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
@@ -101,10 +102,18 @@ export const themeSlice = createSlice({
       state,
       { payload: { color, key } }: PayloadAction<{ color: string; key: App.Theme.ThemeColorKey }>
     ) {
+      let colorValue = color;
+
+      if (state.settings.recommendColor) {
+        // get a color palette by provided color and color name, and use the suitable color
+
+        colorValue = getPaletteColorByNumber(color, 500, true);
+      }
+
       if (key === 'primary') {
-        state.settings.themeColor = color;
+        state.settings.themeColor = colorValue;
       } else {
-        state.settings.otherColor[key] = color;
+        state.settings.otherColor[key] = colorValue;
       }
     }
   },

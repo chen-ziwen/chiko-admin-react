@@ -2,6 +2,7 @@
 declare namespace App {
   /** Theme namespace */
   namespace Theme {
+    type ColorPaletteNumber = import('@chiko-admin/color').ColorPaletteNumber;
     /** Theme setting */
     interface ThemeSetting {
       /** colour weakness mode */
@@ -122,9 +123,9 @@ declare namespace App {
 
     type ThemeColorKey = keyof ThemeColor;
 
-    // type ThemePaletteColor = {
-    //   [key in ThemeColorKey | `${ThemeColorKey}-${ColorPaletteNumber}`]: string;
-    // };
+    type ThemePaletteColor = {
+      [key in ThemeColorKey | `${ThemeColorKey}-${ColorPaletteNumber}`]: string;
+    };
 
     type BaseToken = Record<string, Record<string, string>>;
 

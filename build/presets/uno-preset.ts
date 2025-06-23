@@ -41,8 +41,8 @@ export function presetChikoAdmin(): Preset<Theme> {
         'fixed-tr': 'fixed-rt'
       },
       {
-        'ellipsis-text': 'nowrap-hidden text-ellipsis',
-        'nowrap-hidden': 'overflow-hidden whitespace-nowrap'
+        'nowrap-hidden': 'overflow-hidden whitespace-nowrap',
+        'ellipsis-text': 'nowrap-hidden text-ellipsis'
       }
     ]
   };
