@@ -27,6 +27,7 @@
     "@chiko-admin/hooks": "workspace:*",
     "@chiko-admin/layout": "workspace:*",
     "@chiko-admin/utils": "workspace:*",
+    "@chiko-admin/uno-preset": "workspace:*",
     "@iconify/react": "^6.0.0",
     "@reduxjs/toolkit": "^2.8.2",
     "@soybean-react/vite-plugin-react-router": "^0.7.1",
@@ -87,6 +88,8 @@
     "vite-plugin-svg-icons": "^2.0.1"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": ["eslint --fix"]
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
   }
 }

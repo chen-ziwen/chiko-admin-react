@@ -1,5 +1,7 @@
+// @unocss-include
+
 import type { Preset } from '@unocss/core';
-import type { Theme } from '@unocss/preset-wind3';
+import type { Theme } from '@unocss/preset-uno';
 
 export function presetChikoAdmin(): Preset<Theme> {
   const preset: Preset<Theme> = {
@@ -41,8 +43,8 @@ export function presetChikoAdmin(): Preset<Theme> {
         'fixed-tr': 'fixed-rt'
       },
       {
-        'nowrap-hidden': 'overflow-hidden whitespace-nowrap',
-        'ellipsis-text': 'nowrap-hidden text-ellipsis'
+        'ellipsis-text': 'nowrap-hidden text-ellipsis',
+        'nowrap-hidden': 'overflow-hidden whitespace-nowrap'
       }
     ]
   };

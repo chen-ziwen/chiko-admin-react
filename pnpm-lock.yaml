@@ -26,6 +26,9 @@ importers:
       '@chiko-admin/layout':
         specifier: workspace:*
         version: link:packages/layout
+      '@chiko-admin/uno-preset':
+        specifier: workspace:*
+        version: link:packages/uno-preset
       '@chiko-admin/utils':
         specifier: workspace:*
         version: link:packages/utils
@@ -327,6 +330,8 @@ importers:
       yargs:
         specifier: 17.7.2
         version: 17.7.2
+
+  packages/uno-preset: {}
 
   packages/utils:
     dependencies:
