@@ -20,10 +20,6 @@ export interface CliOption {
   cleanupDirs: string[];
   /** The project root directory */
   cwd: string;
-  /** Git commit scopes */
-  gitCommitScopes: [string, string][];
-  /** Git commit types */
-  gitCommitTypes: [string, string][];
   /**
    * Npm-check-updates command args
    *

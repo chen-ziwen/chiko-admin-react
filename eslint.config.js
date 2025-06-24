@@ -35,7 +35,7 @@ export default defineConfig(
         }
       ],
       // 只允许 warn 和 error 保留
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      // 'no-console': ['warn', { allow: ['warn', 'error'] }],
 
       'no-underscore-dangle': 'off',
 

@@ -3,11 +3,10 @@ import { blue, lightGreen } from 'kolorist';
 
 import { version } from '../package.json';
 
-import { cleanup, genChangelog, generateRoute, gitCommit, gitCommitVerify, release, updatePkg } from './commands';
+import { cleanup, genChangelog, release, updatePkg } from './commands';
 import { loadCliOptions } from './config';
-import type { Lang } from './locales';
 
-type Command = 'changelog' | 'cleanup' | 'gen-route' | 'git-commit' | 'git-commit-verify' | 'release' | 'update-pkg';
+type Command = 'changelog' | 'cleanup' | 'release' | 'update-pkg';
 
 type CommandAction<A extends object> = (args?: A) => Promise<void> | void;
 
@@ -24,12 +23,6 @@ interface CommandArg {
   cleanupDir?: string;
   /** Execute additional command after bumping and before git commit. Defaults to 'pnpm sa changelog' */
   execute?: string;
-  /**
-   * display lang of cli
-   *
-   * @default 'en-us'
-   */
-  lang?: Lang;
   /** Indicates whether to push the git commit and tag. Defaults to true */
   push?: boolean;
   /** Generate changelog by total tags */
@@ -39,7 +32,7 @@ interface CommandArg {
 export async function setupCli() {
   const cliOptions = await loadCliOptions();
 
-  const cli = cac(blue('soybean-admin'));
+  const cli = cac(blue('chiko-admin'));
 
   cli
     .version(lightGreen(version))
@@ -68,24 +61,6 @@ export async function setupCli() {
         await cleanup(cliOptions.cleanupDirs);
       },
       desc: 'delete dirs: node_modules, dist, etc.'
-    },
-    'gen-route': {
-      action: async () => {
-        await generateRoute();
-      },
-      desc: 'generate route'
-    },
-    'git-commit': {
-      action: async args => {
-        await gitCommit(args?.lang);
-      },
-      desc: 'git commit, generate commit message which match Conventional Commits standard'
-    },
-    'git-commit-verify': {
-      action: async () => {
-        await gitCommitVerify();
-      },
-      desc: 'verify git commit message, make sure it match Conventional Commits standard'
     },
     release: {
       action: async args => {
