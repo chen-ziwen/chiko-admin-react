@@ -99,7 +99,7 @@ export function getGlobalMenuByBaseRoute(route: RouteObject): App.Global.Menu {
  * @param route
  */
 export function getActiveFirstLevelMenuKey(route: App.Global.TabRoute) {
-  const { activeMenu, hideInMenu } = route.handle;
+  const { activeMenu, hideInMenu } = route.handle ?? {};
 
   const name = route.pathname;
 
@@ -151,7 +151,7 @@ export function mergeMenus(menus: App.Global.Menu[], newMenus: App.Global.Menu[]
 }
 
 export function getSelectKey(route: Router.Route) {
-  const { activeMenu, hideInMenu } = route.handle;
+  const { activeMenu, hideInMenu } = route.handle ?? {};
 
   const name = route.pathname as string;
 

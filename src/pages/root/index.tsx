@@ -1,4 +1,4 @@
-import type { PropsWithChildren } from 'react';
+import type { FC, PropsWithChildren } from 'react';
 
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {
   // 这里会进行一些路由守卫操作 还有一些标题进度条操作

@@ -9,11 +9,12 @@ import {
   LAYOUT_MODE_VERTICAL_MIX
 } from '@/constants/common';
 // import { useMixMenuContext } from '@/features/menu';
+import MenuProvider from '@/features/menu/MenuProvider';
 import {
   LayoutContent,
   LayoutFooter,
   LayoutHeader,
-  // LayoutMenu,
+  LayoutMenu,
   LayoutSider,
   LayoutTabbar,
   ThemeDrawer
@@ -112,56 +113,58 @@ const BasicLayout = () => {
   }, [isMobile, dispatch]);
 
   return (
-    <AdminLayout
-      fixedFooter={themeSettings.footer.fixed}
-      fixedTop={themeSettings.fixedHeaderAndTab}
-      Footer={<LayoutFooter />}
-      footerHeight={themeSettings.footer.height}
-      footerVisible={themeSettings.footer.visible}
-      fullContent={fullContent}
-      headerHeight={themeSettings.header.height}
-      isMobile={isMobile}
-      mode={layoutMode as LayoutMode}
-      rightFooter={themeSettings.footer.right}
-      scrollElId={LAYOUT_SCROLL_EL_ID}
-      scrollMode={themeSettings.layout.scrollMode}
-      siderCollapse={siderCollapse}
-      siderCollapsedWidth={siderCollapsedWidth}
-      siderVisible={siderVisible}
-      siderWidth={siderWidth}
-      Tab={<LayoutTabbar />}
-      tabHeight={themeSettings.tab.height}
-      tabVisible={themeSettings.tab.visible}
-      updateSiderCollapse={updateSiderCollapse}
-      Header={
-        <LayoutHeader
-          isMobile={isMobile}
+    <MenuProvider>
+      <AdminLayout
+        fixedFooter={themeSettings.footer.fixed}
+        fixedTop={themeSettings.fixedHeaderAndTab}
+        Footer={<LayoutFooter />}
+        footerHeight={themeSettings.footer.height}
+        footerVisible={themeSettings.footer.visible}
+        fullContent={fullContent}
+        headerHeight={themeSettings.header.height}
+        isMobile={isMobile}
+        mode={layoutMode as LayoutMode}
+        rightFooter={themeSettings.footer.right}
+        scrollElId={LAYOUT_SCROLL_EL_ID}
+        scrollMode={themeSettings.layout.scrollMode}
+        siderCollapse={siderCollapse}
+        siderCollapsedWidth={siderCollapsedWidth}
+        siderVisible={siderVisible}
+        siderWidth={siderWidth}
+        Tab={<LayoutTabbar />}
+        tabHeight={themeSettings.tab.height}
+        tabVisible={themeSettings.tab.visible}
+        updateSiderCollapse={updateSiderCollapse}
+        Header={
+          <LayoutHeader
+            isMobile={isMobile}
+            mode={themeSettings.layout.mode}
+            reverse={themeSettings.layout.reverseHorizontalMix}
+            siderWidth={themeSettings.sider.width}
+          />
+        }
+        Sider={
+          <LayoutSider
+            headerHeight={themeSettings.header.height}
+            inverted={themeSettings.sider.inverted}
+            isHorizontalMix={isHorizontalMix}
+            isVerticalMix={isVerticalMix}
+            siderCollapse={siderCollapse}
+          />
+        }
+      >
+        <LayoutContent />
+
+        <LayoutMenu
           mode={themeSettings.layout.mode}
           reverse={themeSettings.layout.reverseHorizontalMix}
-          siderWidth={themeSettings.sider.width}
         />
-      }
-      Sider={
-        <LayoutSider
-          headerHeight={themeSettings.header.height}
-          inverted={themeSettings.sider.inverted}
-          isHorizontalMix={isHorizontalMix}
-          isVerticalMix={isVerticalMix}
-          siderCollapse={siderCollapse}
-        />
-      }
-    >
-      <LayoutContent />
 
-      {/* <LayoutMenu
-        mode={themeSettings.layout.mode}
-        reverse={themeSettings.layout.reverseHorizontalMix}
-      /> */}
-
-      <Suspense fallback={null}>
-        <ThemeDrawer />
-      </Suspense>
-    </AdminLayout>
+        <Suspense fallback={null}>
+          <ThemeDrawer />
+        </Suspense>
+      </AdminLayout>
+    </MenuProvider>
   );
 };
 

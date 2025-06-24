@@ -49,9 +49,9 @@ export function getRouteIcons(route: Router.Route) {
  * @param route
  */
 export function getTabByRoute(route: Router.Route) {
-  const { fullPath, handle, id, pathname } = route;
+  const { fullPath, handle = {} as Router.RouteHandle, id, pathname } = route;
 
-  const { fixedIndexInTab, i18nKey, keepAlive = false, title } = handle;
+  const { fixedIndexInTab = undefined, i18nKey = undefined, keepAlive = false, title = '' } = handle;
 
   let fixedIndex = fixedIndexInTab;
 

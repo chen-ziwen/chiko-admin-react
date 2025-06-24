@@ -54,7 +54,7 @@
   "devDependencies": {
     "@changesets/cli": "^2.29.5",
     "@chiko-admin/scripts": "workspace:*",
-    "@chiko-admin/uno-preset": "workspace:*",
+    "@chiko-admin/unocss": "workspace:*",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.29.0",

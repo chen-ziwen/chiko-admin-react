@@ -47,6 +47,10 @@ export default defineConfig(
       ],
       'react/jsx-closing-bracket-location': ['warn', 'tag-aligned'],
       'react/jsx-closing-tag-location': 'warn',
+      // 'react-refresh/only-export-components': [
+      //   'warn',
+      //   { allowConstantExport: true }
+      // ],
       'react/jsx-curly-brace-presence': [
         'warn',
         {

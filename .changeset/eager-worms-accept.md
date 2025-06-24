@@ -5,7 +5,7 @@
 "@chiko-admin/hooks": patch
 "@chiko-admin/layout": patch
 "@chiko-admin/scripts": patch
-"@chiko-admin/uno-preset": patch
+"@chiko-admin/unocss": patch
 "@chiko-admin/utils": patch
 ---
 

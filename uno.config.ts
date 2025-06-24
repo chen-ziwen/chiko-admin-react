@@ -1,4 +1,4 @@
-import { presetChikoAdmin } from '@chiko-admin/uno-preset';
+import { presetChikoAdmin } from '@chiko-admin/unocss';
 import { type Theme, presetWind3 } from '@unocss/preset-wind3';
 import transformerDirectives from '@unocss/transformer-directives';
 import transformerVariantGroup from '@unocss/transformer-variant-group';

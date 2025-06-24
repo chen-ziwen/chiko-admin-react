@@ -27,7 +27,7 @@ declare namespace UnionKey {
    * - wrapper: the wrapper component's root element overflow
    * - content: the content component overflow
    */
-  type ThemeScrollMode = import('@chiko-admin/materials').LayoutScrollMode;
+  type ThemeScrollMode = import('@chiko-admin/layout').LayoutScrollMode;
 
   /** Page animate mode */
   type ThemePageAnimateMode = 'fade' | 'fade-bottom' | 'fade-scale' | 'fade-slide' | 'none' | 'zoom-fade' | 'zoom-out';
@@ -38,7 +38,7 @@ declare namespace UnionKey {
    * - chrome: chrome style
    * - button: button style
    */
-  type ThemeTabMode = import('@chiko-admin/materials').PageTabMode;
+  type ThemeTabMode = import('@chiko-admin/layout').PageTabMode;
 
   /** Unocss animate key */
   type UnoCssAnimateKey =
